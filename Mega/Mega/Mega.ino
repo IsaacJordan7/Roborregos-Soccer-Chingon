@@ -102,8 +102,8 @@ void loop()
   
   gol();
   //linea();
-  //acomodoMotor();
-  //hola perro
+  acomodoMotor();
+  //isaac
   
   
 }

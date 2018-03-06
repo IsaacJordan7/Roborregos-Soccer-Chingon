@@ -91,26 +91,20 @@ void gol(){
      case 4: 
       digitalWrite(MA1,HIGH);
       digitalWrite(MA2,LOW);
-      analogWrite(PWMA,90);
+      analogWrite(PWMA,95);
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,HIGH);
-      analogWrite(PWMC,180);
+      analogWrite(PWMC,187);
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
-      analogWrite(PWMB,90);
+      analogWrite(PWMB,80);
       
       break; 
-<<<<<<< HEAD
-        /*  
-=======
-          
-<<<<<<< HEAD
+
       
->>>>>>> a93d18c104dbdeb730b1b0e7db5579dcfd9809c0
-=======
->>>>>>> 86310898aef8fac6a6b0617b4ab8e19d31eda96b
+
       //Aparentemente ya quedo
       case 5:
       digitalWrite(MA1,HIGH);
@@ -123,17 +117,12 @@ void gol(){
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
-<<<<<<< HEAD
       analogWrite(PWMB,0);
-=======
       analogWrite(PWMB,xb);
-<<<<<<< HEAD
-      
->>>>>>> a93d18c104dbdeb730b1b0e7db5579dcfd9809c0
-=======
->>>>>>> 86310898aef8fac6a6b0617b4ab8e19d31eda96b
       break;
-      
+
+     /*
+       
       //Aparentemente ya quedo
       //Caso de 30°
       case 6:
