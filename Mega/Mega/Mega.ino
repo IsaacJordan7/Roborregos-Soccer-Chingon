@@ -102,7 +102,7 @@ void loop()
   
   gol();
   //linea();
-  acomodoMotor();
+  //acomodoMotor();
   //isaac
   
   

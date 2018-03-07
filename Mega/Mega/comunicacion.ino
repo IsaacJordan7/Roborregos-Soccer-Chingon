@@ -34,9 +34,10 @@ void gol(){
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
       analogWrite(PWMB,0);
+      break;
 */
       
-      break;
+     
 
     /* case 1:
       digitalWrite(MA1,LOW);
@@ -118,28 +119,28 @@ void gol(){
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
       analogWrite(PWMB,0);
-      analogWrite(PWMB,xb);
+      
       break;
 
-     /*
+   
        
       //Aparentemente ya quedo
       //Caso de 30°
       case 6:
       digitalWrite(MA1,HIGH);
       digitalWrite(MA2,LOW);
-      analogWrite(PWMA,80);
+      analogWrite(PWMA,180);
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,HIGH);
-      analogWrite(PWMC,80);
+      analogWrite(PWMC,90);
 
       digitalWrite(MB1,HIGH);
       digitalWrite(MB2,LOW);
-      analogWrite(PWMB,240);
+      analogWrite(PWMB,90);
       
       break;
-
+  /*
       //Aparentemente ya quedo
       //Caso de 60
       case 7:
