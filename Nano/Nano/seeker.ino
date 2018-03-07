@@ -8,33 +8,42 @@ byte pelota(byte &posicion, byte seccion){
 
   //Declaracion de variables
   int direccion[10]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-  int fuerza[15], maximo = 0, pos = 0;
+  int fuerza[4], maximo = 0, pos = 0;
   double distancia = 0;
 
   //For que lee 10 lecturas
-  for(int i = 0; i < 15; i++){
+  for(int i = 0; i < 4; i++){
     InfraredResult InfraredBall = InfraredSeeker::ReadAC();
     direccion[InfraredBall.Direction]++; 
     fuerza[i] = InfraredBall.Strength;
   }
 
   //Quicksort al arreglo
-  Quicksort(fuerza, 0, 14);
+  Quicksort(fuerza, 0, 3);
   // 0 1 2 3 {4 5 6 7 8 9 10} 11 12 13 14
   //media de las posiciones
-  for(int i = 4; i < 11; i++){
-  distancia += fuerza[i];
-  }
+  distancia = fuerza[1];
+  distancia = distancia + fuerza[2];
   
-  distancia /= 7;
+  distancia /= 2;
 
   //Modificar byte de que tan lejos esta
-  if(distancia < 80){
-    posicion = 10;
+  if(distancia < 62){
+    digitalWrite(lejos,HIGH);
+    digitalWrite(cerca,LOW);
+    digitalWrite(gol,LOW);
+  }
+  else if(distancia > 140){
+    digitalWrite(gol,HIGH);
+    digitalWrite(cerca,LOW);
+    digitalWrite(lejos,LOW);
   }
   else{
-    posicion = 11;
+    digitalWrite(lejos,LOW);
+    digitalWrite(cerca,HIGH);
+    digitalWrite(gol,LOW);
   }
+  
 
   //Buscar la posicion que mas se repita
   for(int i = 0; i < 10; i++){
@@ -44,6 +53,8 @@ byte pelota(byte &posicion, byte seccion){
         pos = i;
       }
   }
+
+
 return pos; 
 }
 
