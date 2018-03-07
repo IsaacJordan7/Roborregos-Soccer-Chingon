@@ -25,20 +25,22 @@ void linea(){
   Quicksort(sensor5,0,3);
   Quicksort(sensor6,0,3);
 
-  /*resultados[0] = (sensor1[1] + sensor1[2])/2;
+  resultados[0] = (sensor1[1] + sensor1[2])/2;
   resultados[1] = (sensor2[1] + sensor2[2])/2;
   resultados[2] = (sensor3[1] + sensor3[2])/2;
   resultados[3] = (sensor4[1] + sensor4[2])/2;
   resultados[4] = (sensor5[1] + sensor5[2])/2;
   resultados[5] = (sensor6[1] + sensor6[2])/2;
-*/
+
  
  
 
  for(int i = 0; i < 6; i++){
  
-  if(resultados[i] <= 750){
+  if(resultados[i] <= 650){
+   Serial.println(resultados[i]);
    lineamotor(i);
+   
     break;
   }
  }

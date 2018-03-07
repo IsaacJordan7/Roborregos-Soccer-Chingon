@@ -101,7 +101,7 @@ void loop()
   }
   
   gol();
-  //linea();
+  linea();
   acomodoMotor();
   //hola perro
   
