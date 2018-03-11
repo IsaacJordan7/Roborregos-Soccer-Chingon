@@ -26,11 +26,11 @@ void gol(){
       case 0:
       digitalWrite(MA1,LOW);
       digitalWrite(MA2,HIGH);
-      analogWrite(PWMA,90);
+      analogWrite(PWMA,130);
 
       digitalWrite(MC1,HIGH);
       digitalWrite(MC2,LOW);
-      analogWrite(PWMC,93);
+      analogWrite(PWMC,130);
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
@@ -43,7 +43,7 @@ void gol(){
      case 1:
       digitalWrite(MA1,LOW);
       digitalWrite(MA2,HIGH);
-      analogWrite(PWMA,90);
+      analogWrite(PWMA,130);
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,LOW);
@@ -51,7 +51,7 @@ void gol(){
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
-      analogWrite(PWMB,90);  
+      analogWrite(PWMB,130);  
      break;
      
      //Aparentemente ya quedo
@@ -59,7 +59,7 @@ void gol(){
      case 2:
       digitalWrite(MA1,LOW);
       digitalWrite(MA2,HIGH);
-      analogWrite(PWMA,90);
+      analogWrite(PWMA,130);
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,LOW);
@@ -67,7 +67,7 @@ void gol(){
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
-      analogWrite(PWMB,90);      
+      analogWrite(PWMB,130);      
      break;
      
      //Aparentemente ya quedo
@@ -79,11 +79,11 @@ void gol(){
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,HIGH);
-      analogWrite(PWMC,90);
+      analogWrite(PWMC,130);
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
-      analogWrite(PWMB,90);
+      analogWrite(PWMB,130);
      
      break;
 
@@ -97,11 +97,11 @@ void gol(){
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,HIGH);
-      analogWrite(PWMC,90);
+      analogWrite(PWMC,130);
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
-      analogWrite(PWMB,90);
+      analogWrite(PWMB,130);
       
       break; 
 
@@ -115,11 +115,11 @@ void gol(){
       case 5:
       digitalWrite(MA1,HIGH);
       digitalWrite(MA2,LOW);
-      analogWrite(PWMA,90);
+      analogWrite(PWMA,130);
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,HIGH);
-      analogWrite(PWMC,95);
+      analogWrite(PWMC,130);
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
@@ -135,7 +135,7 @@ void gol(){
       case 6:
       digitalWrite(MA1,HIGH);
       digitalWrite(MA2,LOW);
-      analogWrite(PWMA,90);
+      analogWrite(PWMA,130);
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,LOW);
@@ -143,7 +143,7 @@ void gol(){
 
       digitalWrite(MB1,HIGH);
       digitalWrite(MB2,LOW);
-      analogWrite(PWMB,92);
+      analogWrite(PWMB,130);
       
       break;
 
@@ -152,7 +152,7 @@ void gol(){
       case 7:
       digitalWrite(MA1,HIGH);
       digitalWrite(MA2,LOW);
-      analogWrite(PWMA,90);
+      analogWrite(PWMA,130);
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,LOW);
@@ -160,7 +160,7 @@ void gol(){
 
       digitalWrite(MB1,HIGH);
       digitalWrite(MB2,LOW);
-      analogWrite(PWMB,92);
+      analogWrite(PWMB,130);
       break;
 
       //Ya quedo
@@ -172,11 +172,11 @@ void gol(){
 
       digitalWrite(MC1,HIGH);
       digitalWrite(MC2,LOW);
-      analogWrite(PWMC,93);
+      analogWrite(PWMC,130);
 
       digitalWrite(MB1,HIGH);
       digitalWrite(MB2,LOW);
-      analogWrite(PWMB,93);
+      analogWrite(PWMB,130);
       break;
       
       //Ya quedo
@@ -184,11 +184,11 @@ void gol(){
       case 9:
       digitalWrite(MA1,LOW);
       digitalWrite(MA2,HIGH);
-      analogWrite(PWMA,90);
+      analogWrite(PWMA,130);
 
       digitalWrite(MC1,HIGH);
       digitalWrite(MC2,LOW);
-      analogWrite(PWMC,93);
+      analogWrite(PWMC,130);
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);

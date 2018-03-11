@@ -37,8 +37,8 @@ void linea(){
 
  for(int i = 0; i < 6; i++){
  
-  if(resultados[i] <= 650){
-   Serial.println(resultados[i]);
+  if(resultados[i] <= 600){
+   
    lineamotor(i);
    
     break;

@@ -98,7 +98,11 @@ void lineamotor(int blanco){
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
-      analogWrite(PWMB,xb);          
+      analogWrite(PWMB,xb);  
+
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,LOW);
+      analogWrite(PWMA,0);
                  
       break;
 
@@ -111,6 +115,10 @@ void lineamotor(int blanco){
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
       analogWrite(PWMB,xb);
+
+      digitalWrite(MC1,LOW);
+      digitalWrite(MC2,LOW);
+      analogWrite(PWMC,0);
         
       break;
       
@@ -122,7 +130,11 @@ void lineamotor(int blanco){
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,HIGH);
-      analogWrite(PWMC,xc);      
+      analogWrite(PWMC,xc);  
+
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,LOW);
+      analogWrite(PWMB,0);
       break;
 
       //ATRAS
@@ -135,7 +147,9 @@ void lineamotor(int blanco){
       digitalWrite(MC2,LOW);
       analogWrite(PWMC,xc); 
            
-
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,LOW);
+      analogWrite(PWMB,0);
        
       break;
 
@@ -149,6 +163,10 @@ void lineamotor(int blanco){
       digitalWrite(MB1,HIGH);
       digitalWrite(MB2,LOW);
       analogWrite(PWMB,xb);
+
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,LOW);
+      analogWrite(PWMA,0);
       
       break;
 
@@ -161,21 +179,25 @@ void lineamotor(int blanco){
       digitalWrite(MB1,HIGH);
       digitalWrite(MB2,LOW);
       analogWrite(PWMB,xb);  
+
+      digitalWrite(MC1,LOW);
+      digitalWrite(MC2,LOW);
+      analogWrite(PWMC,0);
       break;
   }
  delay(350); 
  //Apagado de todos los motores
  digitalWrite(MA1,LOW);
  digitalWrite(MA2,LOW);
- analogWrite(PWMA,xa);
+ analogWrite(PWMA,0);
 
  digitalWrite(MB1,LOW);
  digitalWrite(MB2,LOW);
- analogWrite(PWMB,xb);
+ analogWrite(PWMB,0);
 
  digitalWrite(MC1,LOW);
  digitalWrite(MC2,LOW);
- analogWrite(PWMC,xc);
+ analogWrite(PWMC,0);
  
  digitalWrite(12,LOW);
  
