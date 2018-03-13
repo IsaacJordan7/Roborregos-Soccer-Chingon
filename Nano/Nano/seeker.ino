@@ -27,23 +27,7 @@ byte pelota(byte &posicion, byte seccion){
   
   distancia /= 2;
 
-  //Modificar byte de que tan lejos esta
-  if(distancia < 62){
-    digitalWrite(lejos,HIGH);
-    digitalWrite(cerca,LOW);
-    digitalWrite(gol,LOW);
-  }
-  else if(distancia > 140){
-    digitalWrite(gol,HIGH);
-    digitalWrite(cerca,LOW);
-    digitalWrite(lejos,LOW);
-  }
-  else{
-    digitalWrite(lejos,LOW);
-    digitalWrite(cerca,HIGH);
-    digitalWrite(gol,LOW);
-  }
-  
+  dis = (int)distancia;
 
   //Buscar la posicion que mas se repita
   for(int i = 0; i < 10; i++){
