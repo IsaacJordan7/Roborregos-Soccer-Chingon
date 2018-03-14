@@ -63,7 +63,7 @@ double angulo = acomodoAngular(), angulo2 = angulo;
         }
 
 
-        delay(2);
+        delay(1);
         digitalWrite(MA1,LOW);
         digitalWrite(MA2,LOW);
         analogWrite(PWMA,xa);

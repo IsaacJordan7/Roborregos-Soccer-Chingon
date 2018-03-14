@@ -6,6 +6,20 @@
 
 Adafruit_BNO055 bno = Adafruit_BNO055(55);
 
+/*
+  Ultrasonicos
+  
+  derecha 
+  Echo = 8
+  Triguer = 9;
+
+  Izquierda 
+  echo = 7
+  triguer = 6
+*/
+
+ int velocidad = 200;
+
 //Motor A
 const int MA1 = 52;
 const int MA2 = 53;
@@ -41,14 +55,14 @@ byte seccion[2] = {0,0};
 void setup() 
 {
   Serial.begin(9600);
-  Serial.println("Orientation Sensor Test"); Serial.println("");
+  Serial.println("Orientation Sensor Test"); 
+  Serial.println("");
   
   //Initialise the sensor 
   if(!bno.begin())
   {
     //* There was a problem detecting the BNO055 ... check your connections */
-    Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
-    while(1);
+    Serial.println("J");
   }
   
   delay(1000);
@@ -81,7 +95,7 @@ void setup()
   pinMode(FR5,INPUT);
   pinMode(FR6,INPUT);
 
-  pinMode(12,OUTPUT);
+  pinMode(13,OUTPUT);
   
   digitalWrite(EN_B,HIGH);
   digitalWrite(EN_C,HIGH);
@@ -94,16 +108,17 @@ void setup()
  
 void loop() 
 {     
+  
   if(Serial.available() ){
     Serial.readBytes(seccion,1);
-    digitalWrite(12,HIGH);
-    
+  
   }
-  
+ 
   gol();
-  linea();
+ // linea();
+ 
   acomodoMotor();
-  //hola perro
-  
+
+   
   
 }
