@@ -199,10 +199,10 @@ void gol(){
 
       default:
       digitalWrite(MA1,LOW);
-      digitalWrite(MA2,HIGH);
+      digitalWrite(MA2,LOW);
       analogWrite(PWMA,0);
 
-      digitalWrite(MC1,HIGH);
+      digitalWrite(MC1,LOW);
       digitalWrite(MC2,LOW);
       analogWrite(PWMC,0);
 

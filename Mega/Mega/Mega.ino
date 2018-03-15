@@ -18,7 +18,11 @@ Adafruit_BNO055 bno = Adafruit_BNO055(55);
   triguer = 6
 */
 
- int velocidad = 200;
+volatile int contador = 0;
+int n = contador;
+
+
+ int velocidad = 115;
 
 //Motor A
 const int MA1 = 52;
@@ -49,6 +53,18 @@ const int FR3 = A3;
 const int FR4 = A4; //Enfrente
 const int FR5 = A5; //
 const int FR6 = A6;
+
+
+
+//Leds Verificadores
+
+const int prueba = 11;
+
+
+
+const int a1 = 8;
+const int a2 = 9;
+const int a3 = 10;
 
 byte seccion[2] = {0,0};
 
@@ -95,15 +111,22 @@ void setup()
   pinMode(FR5,INPUT);
   pinMode(FR6,INPUT);
 
-  pinMode(13,OUTPUT);
+  pinMode(12,OUTPUT);
   
   digitalWrite(EN_B,HIGH);
   digitalWrite(EN_C,HIGH);
   digitalWrite(EN_A,HIGH);
 
+  pinMode(a1,INPUT);
+  pinMode(a2,INPUT);
+  pinMode(a3,INPUT);
 
-  
-  
+
+  pinMode(prueba,HIGH);
+  digitalWrite(prueba,LOW);
+  //Interrupcion
+  pinMode(19,INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(19), cont, FALLING);
 }
  
 void loop() 
@@ -115,10 +138,25 @@ void loop()
   }
  
   gol();
- // linea();
+
+ /*
+    Linea
+ */
  
-  acomodoMotor();
+
+ if (n != contador){   
+  linea();
+  n = contador ;
+ }
+
+ 
+  acomodoMotor(1);
 
    
   
 }
+
+void cont(){ 
+    contador++;
+}
+
