@@ -23,7 +23,7 @@ void acomodoMotor(int retardo){
 double angulo = acomodoAngular(), angulo2 = angulo;
 
 //Falta ver si en algun punto te da angulos negativos
-
+  
    if(angulo > 15 && angulo < 345){
         if(angulo <= 180)
         {
@@ -75,9 +75,10 @@ double angulo = acomodoAngular(), angulo2 = angulo;
         digitalWrite(MC1,LOW);
         digitalWrite(MC2,LOW);
         analogWrite(PWMC,xc);
+  
     }
 
-    
+   
   
 }
 
@@ -96,8 +97,8 @@ void lineamotor(int blanco){
  digitalWrite(MC1,LOW);
  digitalWrite(MC2,LOW);
  analogWrite(PWMC,0);
- delay(5);
- acomodoMotor(10);
+ 
+ acomodoMotor(12);
  
   
   switch(blanco){
@@ -198,7 +199,7 @@ void lineamotor(int blanco){
       break;
       
   }
- delay(800); 
+ delay(700); 
  //Apagado de todos los motores
  digitalWrite(MA1,LOW);
  digitalWrite(MA2,LOW);

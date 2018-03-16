@@ -22,7 +22,7 @@ volatile int contador = 0;
 int n = contador;
 
 
- int velocidad = 115;
+ int velocidad = 110;
 
 //Motor A
 const int MA1 = 52;
@@ -67,6 +67,7 @@ const int a2 = 9;
 const int a3 = 10;
 
 byte seccion[2] = {0,0};
+byte anterior = -1;
 
 void setup() 
 {
@@ -134,23 +135,23 @@ void loop()
   
   if(Serial.available() ){
     Serial.readBytes(seccion,1);
-  
   }
+  
  
-  gol();
-
+    gol();
+  
  /*
     Linea
  */
  
 
- if (n != contador){   
+ if (n != contador && contador > 1){   
   linea();
   n = contador ;
  }
 
  
-  acomodoMotor(1);
+  acomodoMotor(3);
 
    
   
