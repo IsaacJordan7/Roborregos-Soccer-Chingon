@@ -15,7 +15,7 @@ void linea(){
   }
   else if(b3 == 0 && b2 == 1 && b1 ==0){
     lineamotor(2);
-    digitalWrite(prueba,HIGH);
+    
   }
   else if(b3 == 0 && b2 == 1 && b1 ==1){
     lineamotor(3);

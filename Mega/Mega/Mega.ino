@@ -22,7 +22,7 @@ volatile int contador = 0;
 int n = contador;
 
 
- int velocidad = 110;
+ int velocidad = 115;
 
 //Motor A
 const int MA1 = 52;
@@ -151,7 +151,7 @@ void loop()
  }
 
  
-  acomodoMotor(3);
+  acomodoMotor(1);
 
    
   
