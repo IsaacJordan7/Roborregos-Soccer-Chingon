@@ -85,7 +85,6 @@ double angulo = acomodoAngular(), angulo2 = angulo;
 
 void lineamotor(int blanco){
 
- digitalWrite(12,HIGH);
  digitalWrite(MA1,LOW);
  digitalWrite(MA2,LOW);
  analogWrite(PWMA,0);
@@ -102,54 +101,41 @@ void lineamotor(int blanco){
   
   switch(blanco){
 
-     
-      case 0:
-      digitalWrite(MA1,HIGH);
-      digitalWrite(MA2,LOW);
-      analogWrite(PWMA,velocidad);
-
-      digitalWrite(MC1,LOW);
-      digitalWrite(MC2,HIGH);
-      analogWrite(PWMC,velocidad);
-
-      digitalWrite(MB1,LOW);
-      digitalWrite(MB2,LOW);
-      analogWrite(PWMB,0);
-      break;
-
-      case 1:
-    
+  
+    case 0:
       digitalWrite(MA1,LOW);
       digitalWrite(MA2,LOW);
       analogWrite(PWMA,0);
 
-      digitalWrite(MC1,LOW);
-      digitalWrite(MC2,HIGH);
+      digitalWrite(MC1,HIGH);
+      digitalWrite(MC2,LOW);
       analogWrite(PWMC,velocidad);
 
-      digitalWrite(MB1,LOW);
-      digitalWrite(MB2,HIGH);
+      digitalWrite(MB1,HIGH);
+      digitalWrite(MB2,LOW);
       analogWrite(PWMB,velocidad);
-        
-      break;
-      
-      //ENFRENTE
-      case 2:
+
+      delay(300);
+
       digitalWrite(MA1,HIGH);
       digitalWrite(MA2,LOW);
       analogWrite(PWMA,velocidad);
 
       digitalWrite(MC1,LOW);
-      digitalWrite(MC2,LOW);
-      analogWrite(PWMC,0);
+      digitalWrite(MC2,HIGH);
+      analogWrite(PWMC,velocidad);
 
-      digitalWrite(MB1,HIGH);
+      digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
-      analogWrite(PWMB,velocidad);
+
+      analogWrite(PWMB,0);
+
+      
       break;
 
-      //ATRAS
-      case 3:
+
+      case 1:
+    
       digitalWrite(MA1,LOW);
       digitalWrite(MA2,HIGH);
       analogWrite(PWMA,velocidad);
@@ -161,12 +147,12 @@ void lineamotor(int blanco){
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
       analogWrite(PWMB,0);
-       
+        
       break;
-
-      //Es el 1
-      case 4:
-      
+ 
+     
+     
+      case 2:
       digitalWrite(MA1,LOW);
       digitalWrite(MA2,HIGH);
       analogWrite(PWMA,velocidad);
@@ -178,34 +164,116 @@ void lineamotor(int blanco){
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
       analogWrite(PWMB,velocidad);
+
+      delay(300);
+
+      digitalWrite(MA1,HIGH);
+      digitalWrite(MA2,LOW);
+      analogWrite(PWMA,velocidad);
+
+      digitalWrite(MC1,LOW);
+      digitalWrite(MC2,HIGH);
+      analogWrite(PWMC,velocidad);
+
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,LOW);
+
+      analogWrite(PWMB,0);
+
+      
+      break;
+
+      //ATRAS
+      case 3:
+      
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,LOW);
+      analogWrite(PWMA,0);
+
+      digitalWrite(MC1,LOW);
+      digitalWrite(MC2,HIGH);
+      analogWrite(PWMC,velocidad);
+
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,HIGH);
+      analogWrite(PWMB,velocidad);
+
+      delay(300);
+
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,HIGH);
+      analogWrite(PWMA,velocidad);
+
+      digitalWrite(MC1,HIGH);
+      digitalWrite(MC2,LOW);
+      analogWrite(PWMC,velocidad);
+
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,LOW);
+      analogWrite(PWMB,0);
+      
+      break;
+
+      //Es el 1
+      case 4:
+      digitalWrite(MA1,HIGH);
+      digitalWrite(MA2,LOW);
+      analogWrite(PWMA,velocidad);
+
+      digitalWrite(MC1,LOW);
+      digitalWrite(MC2,HIGH);
+      analogWrite(PWMC,velocidad);
+
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,LOW);
+
+      analogWrite(PWMB,0);
+      
+      
+      
       
       break;
 
       //Es el 2
       case 5:
-      digitalWrite(MA1,LOW);
+      
+      digitalWrite(MA1,HIGH);
       digitalWrite(MA2,LOW);
-      analogWrite(PWMA,0);
+      analogWrite(PWMA,velocidad);
+
+      digitalWrite(MC1,LOW);
+      digitalWrite(MC2,LOW);
+      analogWrite(PWMC,0);
+
+      digitalWrite(MB1,HIGH);
+      digitalWrite(MB2,LOW);
+      analogWrite(PWMB,velocidad);
+
+      delay(300);
+
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,HIGH);
+      analogWrite(PWMA,velocidad);
 
       digitalWrite(MC1,HIGH);
       digitalWrite(MC2,LOW);
       analogWrite(PWMC,velocidad);
 
-      digitalWrite(MB1,HIGH);
+      digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
-      analogWrite(PWMB,velocidad); 
-      break;
+      analogWrite(PWMB,0);
       
+      break;
+     
   }
 
-  
-
-  
- delay(700); 
+delay(260);
  //Apagado de todos los motores
  digitalWrite(MA1,LOW);
  digitalWrite(MA2,LOW);
  analogWrite(PWMA,0);
+ 
+ digitalWrite(23,LOW);
 
  digitalWrite(MB1,LOW);
  digitalWrite(MB2,LOW);
@@ -214,8 +282,6 @@ void lineamotor(int blanco){
  digitalWrite(MC1,LOW);
  digitalWrite(MC2,LOW);
  analogWrite(PWMC,0);
- 
- digitalWrite(12,LOW);
  
  }
 
