@@ -134,6 +134,7 @@ void loop()
   if(Serial.available() ){
     Serial.readBytes(seccion,1);
   }
+ 
  gol();
  
  if (n != contador && contador > 1){   
@@ -148,3 +149,5 @@ void cont(){
     contador++;
 }
 
+
+// PORTERO

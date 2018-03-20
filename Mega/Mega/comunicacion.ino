@@ -27,11 +27,11 @@ void gol(){
      
       digitalWrite(MA1,LOW);
       digitalWrite(MA2,HIGH);
-      analogWrite(PWMA,95);
+      analogWrite(PWMA,0);
 
       digitalWrite(MC1,HIGH);
       digitalWrite(MC2,LOW);
-      analogWrite(PWMC,95);
+      analogWrite(PWMC,0);
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
@@ -104,15 +104,26 @@ void gol(){
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
       analogWrite(PWMB,velocidad);
+
+      
+       /*
+      delay(5);
+
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,HIGH);
+      analogWrite(PWMA,velocidad);
+
+      digitalWrite(MC1,LOW);
+      digitalWrite(MC2,LOW);
+      analogWrite(PWMC,0);
+
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,HIGH);
+      analogWrite(PWMB,velocidad); 
+      */
       
       break; 
-
-       
-
-          
-
       
-
       //Aparentemente ya quedo
       case 5:
       digitalWrite(MA1,HIGH);
@@ -196,6 +207,13 @@ void gol(){
       digitalWrite(MB2,LOW);
       analogWrite(PWMB,0);
       break;
+
+
+
+
+
+
+
 
       default:
       digitalWrite(MA1,LOW);
