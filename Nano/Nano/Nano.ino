@@ -19,4 +19,6 @@ void loop() {
   seccion = pelota(posicion, seccion);
   
   mandar();
-}
+  Serial.println(seccion);
+ 
+ }

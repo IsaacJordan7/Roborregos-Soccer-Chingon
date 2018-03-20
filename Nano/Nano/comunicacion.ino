@@ -3,4 +3,5 @@ void mandar(){
     
     Serial.write(seccion);
   }
+
 }

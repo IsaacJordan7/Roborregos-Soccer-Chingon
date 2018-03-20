@@ -101,8 +101,10 @@ void loop()
   }
   
   gol();
-  //linea();
-  //acomodoMotor();
+  linea();
+  acomodoMotor();
+  
+ 
   //isaac
   
   
