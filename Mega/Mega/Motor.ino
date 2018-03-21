@@ -268,6 +268,8 @@ void lineamotor(int blanco){
   }
 
 delay(260);
+
+
  //Apagado de todos los motores
  digitalWrite(MA1,LOW);
  digitalWrite(MA2,LOW);

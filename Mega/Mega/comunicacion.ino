@@ -58,6 +58,7 @@ void gol(){
      
      //Aparentemente ya quedo
      //Caso: -105
+     
      case 2:
       digitalWrite(MA1,LOW);
       digitalWrite(MA2,HIGH);
@@ -69,30 +70,30 @@ void gol(){
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
-      analogWrite(PWMB,velocidad);      
+      analogWrite(PWMB,velocidad);   
+
+     
+     
      break;
      
      //Aparentemente ya quedo
      //Caso: -60°
      case 3:
       digitalWrite(MA1,LOW);
-      digitalWrite(MA2,LOW);
-      analogWrite(PWMA,0);
+      digitalWrite(MA2,HIGH);
+      analogWrite(PWMA,velocidad);
 
       digitalWrite(MC1,LOW);
-      digitalWrite(MC2,HIGH);
-      analogWrite(PWMC,velocidad);
+      digitalWrite(MC2,LOW);
+      analogWrite(PWMC,0);
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
-      analogWrite(PWMB,velocidad);
-     
-     break;
+      analogWrite(PWMB,velocidad);   
 
-     //Aparentemente ya quedo
-     //Caso de -30°
-    
-     case 4: 
+
+       delay(2);
+        
       digitalWrite(MA1,LOW);
       digitalWrite(MA2,LOW);
       analogWrite(PWMA,0);
@@ -104,6 +105,45 @@ void gol(){
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
       analogWrite(PWMB,velocidad);
+     
+     
+     break;
+     
+
+     //Aparentemente ya quedo
+     //Caso de -30°
+    
+     case 4: 
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,HIGH);
+      analogWrite(PWMA,velocidad);
+
+      digitalWrite(MC1,LOW);
+      digitalWrite(MC2,LOW);
+      analogWrite(PWMC,0);
+
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,HIGH);
+      analogWrite(PWMB,velocidad);   
+
+
+       delay(100);
+        
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,LOW);
+      analogWrite(PWMA,0);
+
+      digitalWrite(MC1,LOW);
+      digitalWrite(MC2,HIGH);
+      analogWrite(PWMC,velocidad);
+
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,HIGH);
+      analogWrite(PWMB,velocidad);
+     
+     
+     break;
+     
 
       
        /*
@@ -128,11 +168,11 @@ void gol(){
       case 5:
       digitalWrite(MA1,HIGH);
       digitalWrite(MA2,LOW);
-      analogWrite(PWMA,velocidad);
+      analogWrite(PWMA,0);
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,HIGH);
-      analogWrite(PWMC,velocidad);
+      analogWrite(PWMC,0);
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
@@ -146,35 +186,69 @@ void gol(){
       //Aparentemente ya quedo
       //Caso de 30°
       case 6:
-      digitalWrite(MA1,HIGH);
-      digitalWrite(MA2,LOW);
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,HIGH);
       analogWrite(PWMA,velocidad);
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,LOW);
       analogWrite(PWMC,0);
 
-      digitalWrite(MB1,HIGH);
-      digitalWrite(MB2,LOW);
-      analogWrite(PWMB,velocidad);
-      
-      break;
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,HIGH);
+      analogWrite(PWMB,velocidad);   
 
+
+      delay(100);
+        
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,LOW);
+      analogWrite(PWMA,0);
+
+      digitalWrite(MC1,LOW);
+      digitalWrite(MC2,HIGH);
+      analogWrite(PWMC,velocidad);
+
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,HIGH);
+      analogWrite(PWMB,velocidad);
+     
+     
+     break;
+     
       //Aparentemente ya quedo
       //Caso de 60
       case 7:
-      digitalWrite(MA1,HIGH);
-      digitalWrite(MA2,LOW);
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,HIGH);
       analogWrite(PWMA,velocidad);
 
       digitalWrite(MC1,LOW);
       digitalWrite(MC2,LOW);
       analogWrite(PWMC,0);
 
-      digitalWrite(MB1,HIGH);
-      digitalWrite(MB2,LOW);
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,HIGH);
+      analogWrite(PWMB,velocidad);   
+
+
+       delay(100);
+        
+      digitalWrite(MA1,LOW);
+      digitalWrite(MA2,LOW);
+      analogWrite(PWMA,0);
+
+      digitalWrite(MC1,LOW);
+      digitalWrite(MC2,HIGH);
+      analogWrite(PWMC,velocidad);
+
+      digitalWrite(MB1,LOW);
+      digitalWrite(MB2,HIGH);
       analogWrite(PWMB,velocidad);
-      break;
+     
+     
+     break;
+     
 
       //Ya quedo
       //Caso de 105
