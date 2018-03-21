@@ -22,7 +22,7 @@ volatile int contador = 0;
 int n = contador;
 
 
- int velocidad = 115;
+ int velocidad = 130;
 
 //Motor A
 const int MA1 = 44;
@@ -31,8 +31,8 @@ const int EN_A = 52;
 const int PWMA = 4;
 
 //Motor B
-const int MB1 = 36;
-const int MB2 = 48;
+const int MB1 = 48;
+const int MB2 = 36;
 const int EN_B = 50;
 const int PWMB = 5;
 
@@ -47,12 +47,6 @@ int xb = 150;
 int xc = 150;
 //Fotorresistencias
 
-const int FR1 = A1;
-const int FR2 = A2;
-const int FR3 = A3;
-const int FR4 = A4; //Enfrente
-const int FR5 = A5; //
-const int FR6 = A6;
 
 
 
@@ -103,12 +97,7 @@ void setup()
   pinMode(PWMC,OUTPUT);
 
   //Fotorresistencias
-  pinMode(FR1,INPUT);
-  pinMode(FR2,INPUT);
-  pinMode(FR3,INPUT);
-  pinMode(FR4,INPUT); 
-  pinMode(FR5,INPUT);
-  pinMode(FR6,INPUT);
+ 
 
   pinMode(23,OUTPUT);
   

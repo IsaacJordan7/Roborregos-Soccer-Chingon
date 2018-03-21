@@ -27,11 +27,11 @@ void gol(){
      
       digitalWrite(MA1,LOW);
       digitalWrite(MA2,HIGH);
-      analogWrite(PWMA,95);
+      analogWrite(PWMA,velocidad);
 
       digitalWrite(MC1,HIGH);
       digitalWrite(MC2,LOW);
-      analogWrite(PWMC,95);
+      analogWrite(PWMC,velocidad);
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
