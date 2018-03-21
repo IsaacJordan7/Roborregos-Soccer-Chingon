@@ -125,7 +125,7 @@ void setup()
   digitalWrite(prueba,LOW);
   //Interrupcion
   pinMode(19,INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(19), cont, FALLING);
+  //attachInterrupt(digitalPinToInterrupt(19), cont, FALLING);
 }
  
 void loop() 
@@ -135,16 +135,19 @@ void loop()
     Serial.readBytes(seccion,1);
   }
  gol();
- 
+ /*
  if (n != contador && contador > 1){   
   linea();
   n = contador ;
  }
+ */
   acomodoMotor(1);
     
 }
 
+/*
 void cont(){ 
     contador++;
 }
+*/
 
