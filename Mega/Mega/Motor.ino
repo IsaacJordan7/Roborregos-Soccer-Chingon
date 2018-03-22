@@ -114,23 +114,6 @@ void lineamotor(int blanco){
       digitalWrite(MB1,HIGH);
       digitalWrite(MB2,LOW);
       analogWrite(PWMB,velocidad);
-
-      delay(300);
-
-      digitalWrite(MA1,HIGH);
-      digitalWrite(MA2,LOW);
-      analogWrite(PWMA,velocidad);
-
-      digitalWrite(MC1,LOW);
-      digitalWrite(MC2,HIGH);
-      analogWrite(PWMC,velocidad);
-
-      digitalWrite(MB1,LOW);
-      digitalWrite(MB2,LOW);
-
-      analogWrite(PWMB,0);
-
-      
       break;
 
 
@@ -164,23 +147,6 @@ void lineamotor(int blanco){
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
       analogWrite(PWMB,velocidad);
-
-      delay(300);
-
-      digitalWrite(MA1,HIGH);
-      digitalWrite(MA2,LOW);
-      analogWrite(PWMA,velocidad);
-
-      digitalWrite(MC1,LOW);
-      digitalWrite(MC2,HIGH);
-      analogWrite(PWMC,velocidad);
-
-      digitalWrite(MB1,LOW);
-      digitalWrite(MB2,LOW);
-
-      analogWrite(PWMB,0);
-
-      
       break;
 
       //ATRAS
@@ -197,21 +163,6 @@ void lineamotor(int blanco){
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,HIGH);
       analogWrite(PWMB,velocidad);
-
-      delay(300);
-
-      digitalWrite(MA1,LOW);
-      digitalWrite(MA2,HIGH);
-      analogWrite(PWMA,velocidad);
-
-      digitalWrite(MC1,HIGH);
-      digitalWrite(MC2,LOW);
-      analogWrite(PWMC,velocidad);
-
-      digitalWrite(MB1,LOW);
-      digitalWrite(MB2,LOW);
-      analogWrite(PWMB,0);
-      
       break;
 
       //Es el 1
@@ -248,26 +199,18 @@ void lineamotor(int blanco){
       digitalWrite(MB1,HIGH);
       digitalWrite(MB2,LOW);
       analogWrite(PWMB,velocidad);
-
-      delay(300);
-
-      digitalWrite(MA1,LOW);
-      digitalWrite(MA2,HIGH);
-      analogWrite(PWMA,velocidad);
-
-      digitalWrite(MC1,HIGH);
-      digitalWrite(MC2,LOW);
-      analogWrite(PWMC,velocidad);
-
-      digitalWrite(MB1,LOW);
-      digitalWrite(MB2,LOW);
-      analogWrite(PWMB,0);
-      
       break;
      
   }
 
-delay(260);
+tiempo = millis();
+while(millis() < tiempo + 250){
+  if (n != contador){   
+  n = contador ;
+  linea();
+ 
+ }
+}
  //Apagado de todos los motores
  digitalWrite(MA1,LOW);
  digitalWrite(MA2,LOW);

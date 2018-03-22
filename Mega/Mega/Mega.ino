@@ -5,7 +5,7 @@
 
 
 Adafruit_BNO055 bno = Adafruit_BNO055(55);
-
+unsigned long long tiempo;
 /*
   Ultrasonicos
   
@@ -22,7 +22,7 @@ volatile int contador = 0;
 int n = contador;
 
 
- int velocidad = 130;
+ int velocidad = 110;
 
 //Motor A
 const int MA1 = 44;
@@ -114,7 +114,7 @@ void setup()
   digitalWrite(prueba,LOW);
   //Interrupcion
   pinMode(19,INPUT_PULLUP);
-  //attachInterrupt(digitalPinToInterrupt(19), cont, FALLING);
+  attachInterrupt(digitalPinToInterrupt(19), cont, FALLING);
 }
  
 void loop() 
@@ -124,19 +124,19 @@ void loop()
     Serial.readBytes(seccion,1);
   }
  gol();
- /*
+ 
  if (n != contador && contador > 1){   
-  linea();
   n = contador ;
+  linea();
  }
- */
+ 
   acomodoMotor(1);
     
 }
 
-/*
+
 void cont(){ 
     contador++;
 }
-*/
+
 
