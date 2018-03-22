@@ -1,8 +1,33 @@
+#include <NewPing.h>
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BNO055.h>
 #include <utility/imumaths.h>
 
+/*
+    Atras
+    Trigger: 25
+    Eccho: 23
+    
+    Derecha
+    Trigger: 11
+    Echo: 12
+    
+    Izquierda
+    Trigger: 10 
+    Echo: 9 
+*/
+/*
+const int trig1 = 11;
+const int trig2 = 10;
+
+const int echo1 = 12;
+const int echo2 = 9;
+
+*/
+
+NewPing derecha(11,12,200);
+NewPing izquierda(10,9,200);
 
 Adafruit_BNO055 bno = Adafruit_BNO055(55);
 unsigned long long tiempo;
@@ -22,7 +47,7 @@ volatile int contador = 0;
 int n = contador;
 
 
- int velocidad = 110;
+ int velocidad = 120;
 
 //Motor A
 const int MA1 = 44;
@@ -52,7 +77,7 @@ int xc = 150;
 
 //Leds Verificadores
 
-const int prueba = 11;
+
 
 
 
@@ -67,9 +92,9 @@ byte lop = 0;
 
 void setup() 
 {
-  pinMode(13,OUTPUT);
+  
   Serial.begin(9600);
-  digitalWrite(13,HIGH);
+  
   //Initialise the sensor 
   if(!bno.begin())
   {
@@ -78,7 +103,7 @@ void setup()
   }
   
   delay(1000);
-  digitalWrite(13,LOW); 
+ 
   bno.setExtCrystalUse(true);
 
   // MotorA
@@ -100,9 +125,6 @@ void setup()
   pinMode(PWMC,OUTPUT);
 
   //Fotorresistencias
- 
-
-  pinMode(23,OUTPUT);
   
   digitalWrite(EN_B,HIGH);
   digitalWrite(EN_C,HIGH);
@@ -112,9 +134,16 @@ void setup()
   pinMode(a2,INPUT);
   pinMode(a3,INPUT);
 
+/*
+  pinMode(trig1, OUTPUT);                  //supersónico izquierda
+  pinMode(trig2, OUTPUT);
 
-  pinMode(prueba,HIGH);
-  digitalWrite(prueba,LOW);
+
+  pinMode(echo1, INPUT);                  //supersónico izquierda
+  pinMode(echo2, INPUT);
+*/
+ 
+
   //Interrupcion
   pinMode(19,INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(19), cont, FALLING);
@@ -122,9 +151,9 @@ void setup()
  
 void loop() 
 {     
-  
-  if(Serial.available() ){
-    Serial.readBytes(seccion,2);
+ 
+ if(Serial.available() ){
+   Serial.readBytes(seccion,2);
   }
  gol();
  
@@ -133,7 +162,7 @@ void loop()
   linea();
  }
  
-  acomodoMotor(1);
+ acomodoMotor(1);
     
 }
 

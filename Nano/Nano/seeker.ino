@@ -29,6 +29,13 @@ byte pelota(byte &posicion, byte seccion){
 
   dis = distancia;
 
+  if(dis >= 100){
+    estado = true;
+  }
+  else{
+    estado = false;
+  }
+
   //Buscar la posicion que mas se repita
   for(int i = 0; i < 10; i++){
    

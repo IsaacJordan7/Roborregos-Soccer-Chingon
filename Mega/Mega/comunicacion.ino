@@ -19,11 +19,31 @@
 
 
 void gol(){
-  
+  double der = 0, izq = 0; 
   int op = (int)seccion[0];
-  if(seccion[1] >=  130 && seccion[0] == 5){
-    digitalWrite(13,HIGH);
+ 
+  if(seccion[1] >= 105 && seccion[0] == 5){
+    
+      der = derecha.ping_cm();
+      izq = izquierda.ping_cm();
+
+      if((der + izq) >= 140){
+
+        if(izq <= 75){
+          op = 6;
+          
+        }
+        else if(der <= 75){
+          op = 4;
+        
+        }
+        else{
+          op = 5;
+        }
+      }
+    
   }
+  
 
 
   
@@ -112,16 +132,10 @@ void gol(){
       digitalWrite(MB2,HIGH);
       analogWrite(PWMB,velocidad);
       
-      break; 
-
-       
-
-          
-
-      
+      break;
 
       //Aparentemente ya quedo
-      case 5:
+      case 5:   
       digitalWrite(MA1,HIGH);
       digitalWrite(MA2,LOW);
       analogWrite(PWMA,velocidad);
@@ -132,11 +146,8 @@ void gol(){
 
       digitalWrite(MB1,LOW);
       digitalWrite(MB2,LOW);
-
       analogWrite(PWMB,0);
-
-    
-
+      
       break;
       
       //Aparentemente ya quedo
@@ -221,3 +232,4 @@ void gol(){
   }
   
 }
+

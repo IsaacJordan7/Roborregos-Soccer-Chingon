@@ -14,6 +14,9 @@ byte anterior = 0;
 
 byte dis = 0;
 
+bool estado = false;
+bool estadoanterior = false;
+
 void setup() {
   // put your setup code here, to run once:
   
@@ -28,9 +31,7 @@ void setup() {
 }
 
 void loop() {
-
-  //Llamar a funcion de pelota
-  anterior = seccion;
+   
   seccion = pelota(posicion, seccion);
   
   mandar();

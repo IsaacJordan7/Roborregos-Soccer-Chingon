@@ -85,6 +85,8 @@ double angulo = acomodoAngular(), angulo2 = angulo;
 
 void lineamotor(int blanco){
 
+ double der = 0, izq = 0;
+ 
  digitalWrite(MA1,LOW);
  digitalWrite(MA2,LOW);
  analogWrite(PWMA,0);
@@ -99,6 +101,32 @@ void lineamotor(int blanco){
 
 
  acomodoMotor(12);
+
+ der = derecha.ping_cm();
+ izq = izquierda.ping_cm();
+ 
+ if((der + izq) >= 140 && (blanco != 1 && blanco != 4)){
+  if(der < izq){
+    if(blanco < 3){
+      blanco = 2;
+    }
+    else{
+        blanco = 3; 
+     }
+  }
+  else{
+      if(blanco < 3){
+        blanco = 0;
+        
+      }
+      else{
+        blanco = 5;
+        
+      }
+  
+  }
+  
+ }
  
  switch(blanco){
 
@@ -217,7 +245,7 @@ while(millis() < tiempo + 400){
  digitalWrite(MA2,LOW);
  analogWrite(PWMA,0);
  
- digitalWrite(23,LOW);
+
 
  digitalWrite(MB1,LOW);
  digitalWrite(MB2,LOW);
