@@ -1,7 +1,6 @@
 
 
 void linea(){
-
    int b1 = digitalRead(a1);
    int b2 = digitalRead(a2);
    int b3 = digitalRead(a3);
@@ -27,5 +26,6 @@ void linea(){
   else{
     lineamotor(5);
   }
+
 }
 

@@ -96,10 +96,11 @@ void lineamotor(int blanco){
  digitalWrite(MC1,LOW);
  digitalWrite(MC2,LOW);
  analogWrite(PWMC,0);
+
+
+ acomodoMotor(12);
  
- acomodoMotor(12); 
-  
-  switch(blanco){
+ switch(blanco){
 
   
     case 0:
@@ -204,7 +205,7 @@ void lineamotor(int blanco){
   }
 
 tiempo = millis();
-while(millis() < tiempo + 250){
+while(millis() < tiempo + 400){
   if (n != contador){   
   n = contador ;
   linea();

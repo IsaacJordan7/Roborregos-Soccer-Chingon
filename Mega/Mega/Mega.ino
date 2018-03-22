@@ -63,10 +63,13 @@ const int a3 = 8;
 byte seccion[2] = {0,0};
 byte anterior = -1;
 
+byte lop = 0;
+
 void setup() 
 {
+  pinMode(13,OUTPUT);
   Serial.begin(9600);
-
+  digitalWrite(13,HIGH);
   //Initialise the sensor 
   if(!bno.begin())
   {
@@ -75,7 +78,7 @@ void setup()
   }
   
   delay(1000);
-    
+  digitalWrite(13,LOW); 
   bno.setExtCrystalUse(true);
 
   // MotorA
@@ -104,7 +107,7 @@ void setup()
   digitalWrite(EN_B,HIGH);
   digitalWrite(EN_C,HIGH);
   digitalWrite(EN_A,HIGH);
-
+  
   pinMode(a1,INPUT);
   pinMode(a2,INPUT);
   pinMode(a3,INPUT);
@@ -121,7 +124,7 @@ void loop()
 {     
   
   if(Serial.available() ){
-    Serial.readBytes(seccion,1);
+    Serial.readBytes(seccion,2);
   }
  gol();
  

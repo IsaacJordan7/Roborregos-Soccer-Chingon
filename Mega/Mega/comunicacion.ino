@@ -19,7 +19,14 @@
 
 
 void gol(){
+  
   int op = (int)seccion[0];
+  if(seccion[1] >=  130 && seccion[0] == 5){
+    digitalWrite(13,HIGH);
+  }
+
+
+  
   switch(op){
 
       

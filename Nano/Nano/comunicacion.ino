@@ -1,13 +1,11 @@
 void mandar(){
 
   
-  if(anterior != seccion){
+  if(anterior != seccion || dis > 128){
     Serial.write(seccion);
-    digitalWrite(posecion,HIGH);
+    Serial.write(dis);
   }
-  else{
-    digitalWrite(posecion,LOW);
-  }
+ 
 
 
 
