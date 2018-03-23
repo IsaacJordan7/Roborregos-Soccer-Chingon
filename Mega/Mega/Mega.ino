@@ -47,7 +47,7 @@ volatile int contador = 0;
 int n = contador;
 
 
- int velocidad = 120;
+ int velocidad = 110;
 
 //Motor A
 const int MA1 = 44;
