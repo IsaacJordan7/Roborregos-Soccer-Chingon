@@ -231,7 +231,7 @@ void lineamotor(int blanco){
       break;
      
   }
-delay(50);
+delay(150);
 tiempo = millis();
 while(millis() < tiempo + 400){
   if (n != contador){   
