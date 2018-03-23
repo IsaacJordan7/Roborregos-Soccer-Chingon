@@ -85,7 +85,7 @@ double angulo = acomodoAngular(), angulo2 = angulo;
 
 void lineamotor(int blanco){
 
- double der = 0, izq = 0;
+ //double der = 0, izq = 0;
  
  digitalWrite(MA1,LOW);
  digitalWrite(MA2,LOW);
@@ -102,6 +102,29 @@ void lineamotor(int blanco){
 
  acomodoMotor(12);
 
+ if(blanco != 1 && blanco != 4){
+  if(porderecha){
+    if(blanco < 3){
+      blanco = 2;
+    }
+    else{
+        blanco = 3; 
+     }
+  }
+  else if(porizquierda){
+    if(blanco < 3){
+        blanco = 0;
+        
+    }
+    else{
+        blanco = 5;
+        
+    }
+  }
+ }
+ 
+ 
+/*
  der = derecha.ping_cm();
  izq = izquierda.ping_cm();
  
@@ -127,7 +150,7 @@ void lineamotor(int blanco){
   }
   
  }
- 
+ */
  switch(blanco){
 
   
@@ -231,7 +254,7 @@ void lineamotor(int blanco){
       break;
      
   }
-delay(75);
+delay(130);
 tiempo = millis();
 while(millis() < tiempo + 400){
   if (n != contador){   
@@ -257,4 +280,31 @@ while(millis() < tiempo + 400){
  
  }
 
+
+void gps(){
+  double der = 0, izq = 0; 
+  
+    
+  der = derecha.ping_cm();
+  izq = izquierda.ping_cm();
+
+  if((der + izq) >= 140 && (der + izq) <= 200){
+
+    if(izq <= 75){
+      porderecha = false;
+      porenfrente = false;
+      porizquierda = true;
+    }
+    else if(der <= 75){
+      porderecha = true;
+      porenfrente = false;
+      porizquierda = false;
+    }
+    else{
+      porderecha = false;
+      porenfrente = true;
+      porizquierda = false;
+    }
+  }
+}
   

@@ -19,33 +19,22 @@
 
 
 void gol(){
-  double der = 0, izq = 0; 
-  int op = (int)seccion[0];
- 
-  if(seccion[1] >= 105 && seccion[0] == 5){
-    
-      der = derecha.ping_cm();
-      izq = izquierda.ping_cm();
-
-      if((der + izq) >= 140){
-
-        if(izq <= 75){
-          op = 6;
-          
-        }
-        else if(der <= 75){
-          op = 4;
-        
-        }
-        else{
-          op = 5;
-        }
-      }
-    
-  }
   
-
-
+  int op = (int)seccion[0];
+      
+      
+  if(seccion[0] == 5 && seccion[1] >= 110){
+    if(porenfrente){
+      op = op;
+    }
+    else if(porderecha){
+      op = 4;
+    }
+    else{
+      op = 6;
+    }
+  }    
+  
   
   switch(op){
 

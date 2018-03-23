@@ -67,9 +67,9 @@ const int MC2 = 30;
 const int EN_C = 32;
 const int PWMC = 3;
 
-int xa = 150;
-int xb = 150;
-int xc = 150;
+int xa = 200;
+int xb = 200;
+int xc = 200;
 //Fotorresistencias
 
 
@@ -77,7 +77,9 @@ int xc = 150;
 
 //Leds Verificadores
 
-
+bool porderecha = false;
+bool porenfrente = false;
+bool porizquierda = false;
 
 
 
@@ -163,7 +165,9 @@ void loop()
  }
  
  acomodoMotor(1);
-    
+ gps();
+
+ 
 }
 
 
