@@ -164,7 +164,7 @@ void loop()
   linea();
  }
  
- acomodoMotor(1);
+ acomodoMotor(4);
  gps();
 
  
