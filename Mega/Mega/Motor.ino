@@ -98,7 +98,7 @@ void lineamotor(int blanco){
  digitalWrite(MC1,LOW);
  digitalWrite(MC2,LOW);
  analogWrite(PWMC,0);
-
+ delay(5);
 
  acomodoMotor(12);
 
@@ -231,7 +231,7 @@ void lineamotor(int blanco){
       break;
      
   }
-
+delay(50);
 tiempo = millis();
 while(millis() < tiempo + 400){
   if (n != contador){   
