@@ -84,9 +84,9 @@ double angulo = acomodoAngular(), angulo2 = angulo;
 
 
 void lineamotor(int blanco){
-
+digitalWrite(cal,HIGH);
  //double der = 0, izq = 0;
- 
+ /*digitalWrite(cal,HIGH);
  digitalWrite(MA1,LOW);
  digitalWrite(MA2,LOW);
  analogWrite(PWMA,0);
@@ -99,9 +99,10 @@ void lineamotor(int blanco){
  digitalWrite(MC2,LOW);
  analogWrite(PWMC,0);
  delay(5);
+*/
 
- acomodoMotor(12);
-
+ acomodoMotor(5);
+/*
  if(blanco != 1 && blanco != 4){
   if(porderecha){
     if(blanco < 3){
@@ -122,7 +123,7 @@ void lineamotor(int blanco){
     }
   }
  }
- 
+ */
  
 /*
  der = derecha.ping_cm();
@@ -255,6 +256,7 @@ void lineamotor(int blanco){
      
   }
 delay(130);
+digitalWrite(cal,LOW);
 tiempo = millis();
 while(millis() < tiempo + 400){
   if (n != contador){   
@@ -280,7 +282,7 @@ while(millis() < tiempo + 400){
  
  }
 
-
+/*
 void gps(){
   double der = 0, izq = 0; 
   
@@ -307,4 +309,4 @@ void gps(){
     }
   }
 }
-  
+  */

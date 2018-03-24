@@ -22,7 +22,7 @@ void gol(){
   
   int op = (int)seccion[0];
       
-      
+  /*    
   if(seccion[0] == 5 && seccion[1] >= 120){
     if(porenfrente){
       op = op;
@@ -34,7 +34,7 @@ void gol(){
       op = 6;
     }
   }    
-  
+  */
   
   switch(op){
 

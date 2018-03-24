@@ -82,7 +82,7 @@ bool porenfrente = false;
 bool porizquierda = false;
 
 
-
+const int cal = 23;
 const int a1 = 6;
 const int a2 = 7;
 const int a3 = 8;
@@ -135,7 +135,7 @@ void setup()
   pinMode(a1,INPUT);
   pinMode(a2,INPUT);
   pinMode(a3,INPUT);
-
+  pinMode(cal,OUTPUT);
 /*
   pinMode(trig1, OUTPUT);                  //supersónico izquierda
   pinMode(trig2, OUTPUT);
@@ -159,13 +159,14 @@ void loop()
   }
  gol();
  
+ 
  if (n != contador && contador > 1){   
   n = contador ;
   linea();
  }
  
- acomodoMotor(4);
- gps();
+ acomodoMotor(2);
+ //8gps();
 
  
 }
